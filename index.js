@@ -16,22 +16,19 @@ async function voteBini(times) {
     await driver.sleep(3000);
 
     for (let i = 0; i < times; i++) {
-      const radioButton = await driver.findElement(By.id("PDI_answer61480085"));
-      const voteButton = await driver.findElement(By.id("pd-vote-button13777388"));
-
       // scroll to element
       console.log("step 1");
-      await driver.executeScript("window.scrollTo(0, 4600)");
+      await driver.executeScript("window.scrollTo(0, 5000)");
 
       await driver.sleep(3000);
 
       console.log("step 2");
-      radioButton.click();
+      await driver.findElement(By.id("PDI_answer61480085")).click();
 
       await driver.sleep(3000);
 
       console.log("step 3");
-      voteButton.click();
+      await driver.findElement(By.id("pd-vote-button13777388")).click();
 
       await driver.sleep(3000);
 
