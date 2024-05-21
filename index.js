@@ -1,7 +1,5 @@
 const { Builder, By, until } = require("selenium-webdriver");
 
-const assert = require("assert");
-
 function randomSleep() {
   return Math.floor(Math.random() * 1000 + 2000);
 }
